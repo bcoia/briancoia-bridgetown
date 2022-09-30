@@ -9,6 +9,7 @@ description: |
 tags:
   - front-end
   - shopify
+  - bootstrap
   - jquery
 live_url: https://deltarune.com/sweepstakes/
 ---

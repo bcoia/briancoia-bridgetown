@@ -6,6 +6,7 @@ description: |
   Static portfolio site written in Bridgetown.
 tags:
   - front-end
+  - hotwire
   - serverless
   - static site
 repo_url: https://github.com/bcoia/briancoia-bridgetown
