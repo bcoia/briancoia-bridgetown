@@ -1,7 +1,7 @@
 <header class="text-center mb-8 md:mb-12 overflow-x-hidden relative">
-  <div id="colorbar" class="h-2 bg-gradient-to-tr from-green-500 via-green-700 to-green-800"></div>
-  <div id="colorback" class="overflow-x-hidden"></div>
-  <a id="headlogo" href="/" class="flex justify-center pt-8 pl-4 pr-4 pb-4">
+  <div id="colorbar" class="h-2 bg-gradient-to-tr from-green-500 via-green-700 to-green-800" data-turbo-permanent></div>
+  <div id="colorback" class="overflow-x-hidden" data-turbo-permanent></div>
+  <a id="headlogo" href="/" class="flex justify-center pt-8 pl-4 pr-4 pb-4" data-turbo-permanent>
     <img id="avatar" class="w-12 h-12 md:w-16 md:h-16 mr-4 md:mr-8 rounded-full shadow-xl" src="{{ '/images/avatar.png' | relative_url }}" alt="Brian Coia" />
     {% svg "/images/logo.svg", alt: "Brian Coia", class: "fill-slate-900 dark:fill-slate-50 overflow-y-visible relative inline-block" %}
   </a>
