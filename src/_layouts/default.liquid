@@ -3,8 +3,8 @@
   <head>
     {% render "head", metadata: site.metadata, title: resource.data.title %}
   </head>
-  <body class="{{ resource.data.layout }} {{ resource.data.page_class }} bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 transition-colors">
-    {% render "navbar", metadata: site.metadata, resource: resource %}
+  <body class="{{ resource.data.layout }} {{ resource.data.page_class }} bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 transition-colors animate">
+    {% render "navbar", metadata: site.metadata, resource: resource, menu: site.data.menu %}
 
     <main class="flex content-center justify-center mx-auto">
       {{ content }}

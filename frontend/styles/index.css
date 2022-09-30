@@ -18,30 +18,10 @@ body {
   overflow-x: hidden;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeInLeft {
-  from { opacity: 0; left: -100px; }
-  to { opacity: 1; left: -50px; }
-}
-
-
-
 body > header img, body > header svg {
   display: inline-block;
   width: 400px;
   max-width: 100%;
-}
-
-nav, footer, #colorbar {
-  animation: fadeIn 0.5s ease-out forwards;
-
-  @media (prefers-reduced-motion) {
-    animation: none !important;
-  }
 }
 
 #colorback {
@@ -55,11 +35,6 @@ nav, footer, #colorbar {
   background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232E4F4D' fill-opacity='0.09' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
   box-shadow: inset 0 -50px 30px theme('colors.slate.200');
   transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: fadeInLeft 0.4s ease-out forwards;
-
-  @media (prefers-reduced-motion) {
-    animation: none !important;
-  }
 }
 
 .dark #colorback {
@@ -67,69 +42,40 @@ nav, footer, #colorbar {
   box-shadow: inset 0 -50px 30px theme('colors.slate.800');
 }
 
-#avatar {
-  animation: logoBob 0.4s ease-out forwards;
-
-  @media (prefers-reduced-motion) {
-    animation: none !important;
-  }
-}
 #logo {
   transition: fill 0.15s ease-out;
 }
 #logo:hover {
   transition: fill 0s;
 }
-#logo > path {
-  animation: logoBob 0.4s ease-out forwards;
 
-  @media (prefers-reduced-motion) {
-    animation: none !important;
-  }
+.tag-badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 1;
+  transition: opacity 0.15s ease-out;
 }
-#logo > #logo_fname_b {
-  animation-delay:  50ms;
-}
-#logo > #logo_fname_r {
-  animation-delay:  75ms;
-}
-#logo > #logo_fname_i {
-  animation-delay: 100ms;
-}
-#logo > #logo_fname_a {
-  animation-delay: 125ms;
-}
-#logo > #logo_fname_n {
-  animation-delay: 150ms;
-}
-#logo > #logo_lname_c {
-  animation-delay: 200ms;
-}
-#logo > #logo_lname_o {
-  animation-delay: 225ms;
-}
-#logo > #logo_lname_i {
-  animation-delay: 250ms;
-}
-#logo > #logo_lname_a {
-  animation-delay: 275ms;
-}
-
-@keyframes logoBob {
-  0%   { transform: translate3d(0px, 0px, 0px); }
-  30%  { transform: translate3d(0px, 5px, 0px); fill: theme('colors.green.500') }
-  60%  { transform: translate3d(0px, -2px, 0px); }
-  100% { transform: translate3d(0px, 0px, 0px); }
+a.tag-badge:hover {
+  opacity: 0.9;
+  transition: opacity 0s;
 }
 
 a {
   color: theme('colors.green.700');
-  transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out, background-color 0.15s ease-out;
 }
 
 a:hover {
   color: theme('colors.green.600');
-  transition: color 0s; 
+  transition: color 0s, background-color 0s;
+}
+
+.project-link * {
+  transition: transform 0.15s ease-out !important;
+  transform: translateX(0);
+}
+.project-link:hover * {
+  transform: translateX(10px);
 }
 
 .dark a {
@@ -138,4 +84,63 @@ a:hover {
 
 .dark a:hover {
   color: theme('colors.green.400');
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate nav, .animate footer, .animate #colorbar {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  .animate #colorback {
+    animation: fadeInLeft 0.4s ease-out forwards;
+  }
+  .animate #avatar {
+    animation: logoBob 0.4s ease-out forwards;
+  }
+  .animate #logo > path {
+    animation: logoBob 0.4s ease-out forwards;
+  }
+  #logo > #logo_fname_b {
+    animation-delay:  50ms;
+  }
+  #logo > #logo_fname_r {
+    animation-delay:  75ms;
+  }
+  #logo > #logo_fname_i {
+    animation-delay: 100ms;
+  }
+  #logo > #logo_fname_a {
+    animation-delay: 125ms;
+  }
+  #logo > #logo_fname_n {
+    animation-delay: 150ms;
+  }
+  #logo > #logo_lname_c {
+    animation-delay: 200ms;
+  }
+  #logo > #logo_lname_o {
+    animation-delay: 225ms;
+  }
+  #logo > #logo_lname_i {
+    animation-delay: 250ms;
+  }
+  #logo > #logo_lname_a {
+    animation-delay: 275ms;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; left: -100px; }
+  to { opacity: 1; left: -50px; }
+}
+
+@keyframes logoBob {
+  0%   { transform: translate3d(0px, 0px, 0px); }
+  30%  { transform: translate3d(0px, 5px, 0px); fill: theme('colors.green.500') }
+  60%  { transform: translate3d(0px, -2px, 0px); }
+  100% { transform: translate3d(0px, 0px, 0px); }
 }

@@ -1,0 +1,9 @@
+- name: About
+  url: /
+  matching: exact
+- name: Projects
+  url: /projects/
+  matching: partial
+- name: Stuff I Use
+  url: /uses/
+  matching: exact

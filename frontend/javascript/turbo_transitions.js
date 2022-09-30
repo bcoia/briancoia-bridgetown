@@ -46,3 +46,8 @@ document.addEventListener("turbo:load", () => {
     { duration: 150, easing: "cubic-bezier(0.45, 0, 0.55, 1)" }
   )
 })
+
+document.addEventListener("turbo:render", () => {
+  let body = document.querySelector("body");
+  body.classList.remove("animate");
+})

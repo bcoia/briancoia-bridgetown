@@ -3,6 +3,14 @@ url: "https://briancoia.com"
 permalink: pretty
 template_engine: liquid
 
+collections:
+  projects:
+    output: true
+    permalink: simple
+    future: true
+    sort_by: date
+    sort_direction: descending
+
 # base_path: "/" # the subpath of your site, e.g. /blog. If you set this option,
 # ensure you use the `relative_url` helper for all links and assets in your HTML.
 # If you're using esbuild for frontend assets, edit `esbuild.config.js` to

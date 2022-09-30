@@ -1,16 +1,18 @@
 <header class="text-center mb-8 md:mb-12 overflow-x-hidden relative">
   <div id="colorbar" class="h-2 bg-gradient-to-tr from-green-500 via-green-700 to-green-800"></div>
   <div id="colorback" class="overflow-x-hidden"></div>
-  <a href="/" class="flex justify-center pt-8 pl-4 pr-4 pb-4">
+  <a id="headlogo" href="/" class="flex justify-center pt-8 pl-4 pr-4 pb-4">
     <img id="avatar" class="w-12 h-12 md:w-16 md:h-16 mr-4 md:mr-8 rounded-full shadow-xl" src="{{ '/images/avatar.png' | relative_url }}" alt="Brian Coia" />
     {% svg "/images/logo.svg", alt: "Brian Coia", class: "fill-slate-900 dark:fill-slate-50 overflow-y-visible relative inline-block" %}
   </a>
 
-  <nav class="container max-w-prose flex hidden">
-    <ul class="flex items-center justify-between space-x-3 md:space-x-4 md:text-base mt-4 font-bold">
-      <li><a class="{% if resource.relative_url != '/' %}text-slate-900 dark:text-slate-50{% else %}text-green-500{% endif %} hover:text-green-400 hover:underline p-4" href="{{ '/' | relative_url }}">Home</a></li>
-      <li><a class="{% if resource.relative_url != '/uses/' %}text-slate-900 dark:text-slate-50{% else %}text-green-500{% endif %} hover:text-green-400 hover:underline p-4" href="{{ '/uses/' | relative_url }}">Uses</a></li>
-      <li><a class="{% if resource.relative_url contains '/projects/' %}text-slate-900 dark:text-slate-50{% else %}text-green-500{% endif %} hover:text-green-400 hover:underline p-4" href="{{ '/projects/' | relative_url }}">Projects</a></li>
+  <nav class="container max-w-prose flex">
+    <ul class="flex items-center justify-between space-x-3 md:space-x-4 md:text-base mt-4">
+      {% for menu_item in menu %}
+        <li>
+          <a class="{% if menu_item.matching == 'exact' and resource.relative_url == menu_item.url %}text-slate-900 dark:text-slate-50 font-bold{% elsif menu_item.matching == 'partial' and resource.relative_url contains menu_item.url %}text-slate-900 dark:text-slate-50 font-bold{% else %}text-green-500{% endif %} hover:text-green-400 hover:underline p-4" href="{{ menu_item.url | relative_url }}">{{ menu_item.name }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </nav>
 </header>

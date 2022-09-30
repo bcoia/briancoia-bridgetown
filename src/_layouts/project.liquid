@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="container max-w-prose">
+  <article class="prose prose-slate dark:prose-invert prose-a:text-green-600 hover:prose-a:text-green-500 dark:prose-a:text-green-500 dark:hover:prose-a:text-green-400 px-4">
+    <h2 class="mb-0">{{ resource.title }}</h2>
+    <h3 class="text-slate-500 font-normal mb-6 text-sm">{% if resource.data.ongoing %}Ongoing{% else %}{{ resource.date | date: "%B %Y" }}{% endif %}</h3>
+
+    {{ content }}
+
+    {% if resource.data.live_url or resource.data.repo_url %}
+    <div id="links" class="block mt-8">
+      {% if resource.data.live_url %}<a href="{{ resource.data.live_url }}" target="_blank" class="bg-green-600 hover:bg-green-500 font-bold !text-white !no-underline rounded p-4 mt-8">View this project <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{% endif %}
+      {% if resource.data.repo_url %}<a href="{{ resource.data.repo_url }}" target="_blank" class="bg-green-600 hover:bg-green-500 font-bold !text-white !no-underline rounded p-4 mt-8">Check the repo <i class="fab fa-github" aria-hidden="true"></i></a>{% endif %}
+    </div>
+    {% endif %}
+  </article>
+
+  <div id="tags" class="px-4 mt-12 block">
+    {% for tag in resource.tags %}
+    {{ tag | tag_badge }}
+    {% endfor %}
+  </div>
+
+  <div id="post_nav" class="px-4 mt-8 block">
+    <a class="no-underline" href="/projects/"><i class="fas fa-chevron-left" aria-hidden="true"></i> Back</a>
+  </div>
+</div>
