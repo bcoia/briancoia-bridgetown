@@ -1,0 +1,140 @@
+/* If you need to add @import statements, do so up here */
+
+@import "jit-refresh.css"; /* triggers frontend rebuilds */
+
+/* Set up Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; left: -100px; }
+  to { opacity: 1; left: -50px; }
+}
+
+
+
+body > header img, body > header svg {
+  display: inline-block;
+  width: 400px;
+  max-width: 100%;
+}
+
+nav, footer, #colorbar {
+  animation: fadeIn 0.5s ease-out forwards;
+
+  @media (prefers-reduced-motion) {
+    animation: none !important;
+  }
+}
+
+#colorback {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: calc(100% + 200px);
+  height: 100px;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232E4F4D' fill-opacity='0.09' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  box-shadow: inset 0 -50px 30px theme('colors.slate.200');
+  animation: fadeInLeft 0.4s ease-out forwards;
+
+  @media (prefers-reduced-motion) {
+    animation: none !important;
+  }
+}
+
+.dark #colorback {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232E4F4D' fill-opacity='0.29' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  box-shadow: inset 0 -50px 30px theme('colors.slate.800');
+}
+
+#avatar {
+  animation: logoBob 0.4s ease-out forwards;
+
+  @media (prefers-reduced-motion) {
+    animation: none !important;
+  }
+}
+#logo {
+  transition: fill 0.15s ease-out;
+}
+#logo:hover {
+  transition: fill 0s;
+}
+#logo > path {
+  animation: logoBob 0.4s ease-out forwards;
+
+  @media (prefers-reduced-motion) {
+    animation: none !important;
+  }
+}
+#logo > #logo_fname_b {
+  animation-delay:  50ms;
+}
+#logo > #logo_fname_r {
+  animation-delay:  75ms;
+}
+#logo > #logo_fname_i {
+  animation-delay: 100ms;
+}
+#logo > #logo_fname_a {
+  animation-delay: 125ms;
+}
+#logo > #logo_fname_n {
+  animation-delay: 150ms;
+}
+#logo > #logo_lname_c {
+  animation-delay: 200ms;
+}
+#logo > #logo_lname_o {
+  animation-delay: 225ms;
+}
+#logo > #logo_lname_i {
+  animation-delay: 250ms;
+}
+#logo > #logo_lname_a {
+  animation-delay: 275ms;
+}
+
+@keyframes logoBob {
+  0%   { transform: translate3d(0px, 0px, 0px); }
+  30%  { transform: translate3d(0px, 5px, 0px); fill: theme('colors.green.500') }
+  60%  { transform: translate3d(0px, -2px, 0px); }
+  100% { transform: translate3d(0px, 0px, 0px); }
+}
+
+a {
+  color: theme('colors.green.700');
+  transition: color 0.15s ease-out;
+}
+
+a:hover {
+  color: theme('colors.green.600');
+  transition: color 0s; 
+}
+
+.dark a {
+  color: theme('colors.green.500');
+}
+
+.dark a:hover {
+  color: theme('colors.green.400');
+}
