@@ -134,8 +134,8 @@ a:hover {
 }
 
 @keyframes fadeInLeft {
-  from { opacity: 0; left: -100px; }
-  to { opacity: 1; left: -50px; }
+  from { opacity: 0; left: -150px; }
+  to { opacity: 1; left: -100px; }
 }
 
 @keyframes logoBob {
