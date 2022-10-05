@@ -45,6 +45,8 @@ GEM
       bridgetown-core (= 1.1.0)
     bridgetown-seo-tag (5.0.0)
       bridgetown (>= 0.20.0, < 2.0)
+    bridgetown-sitemap (1.1.2)
+      bridgetown (>= 0.20, < 2.0)
     bridgetown-svg-inliner (1.0.2)
       bridgetown (>= 0.20, < 2.0)
       nokogiri
@@ -129,6 +131,7 @@ PLATFORMS
 DEPENDENCIES
   bridgetown (~> 1.1.0)
   bridgetown-seo-tag
+  bridgetown-sitemap (~> 1.1)
   bridgetown-svg-inliner (~> 1.0)
   puma (~> 5.6)
 

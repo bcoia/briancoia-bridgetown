@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem "bridgetown", "~> 1.1.0"
 
 gem "bridgetown-seo-tag", group: :bridgetown_plugins
+gem "bridgetown-sitemap", "~> 1.1", group: :bridgetown_plugins
 gem "bridgetown-svg-inliner", "~> 1.0", group: :bridgetown_plugins
 
 # Uncomment to add file-based dynamic routing to your project:
