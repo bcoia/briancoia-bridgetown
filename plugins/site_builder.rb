@@ -5,7 +5,6 @@ end
 class Builders::Filters < SiteBuilder
   def build
     liquid_filter :tag_badge do |tag|
-      puts tag
       tag_color = color_from_string(tag)
       tag_text = contrasting_text_color(tag_color)
       "<span class='tag-badge' style='background-color: #{tag_color}; color: #{tag_text};'>#{tag}</span>"

@@ -6,7 +6,7 @@
   <body class="{{ resource.data.layout }} {{ resource.data.page_class }} bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 transition-colors animate">
     {% render "navbar", metadata: site.metadata, resource: resource, menu: site.data.menu %}
 
-    <main class="flex content-center justify-center mx-auto">
+    <main class="flex flex-col content-center max-w-prose mx-auto">
       {{ content }}
     </main>
 

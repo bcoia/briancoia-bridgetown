@@ -60,12 +60,12 @@ a.tag-badge:hover {
   transition: opacity 0s;
 }
 
-a {
+a, button {
   color: theme('colors.green.700');
   transition: color 0.15s ease-out, background-color 0.15s ease-out;
 }
 
-a:hover {
+a:hover, button:hover {
   color: theme('colors.green.600');
   transition: color 0s, background-color 0s;
 }

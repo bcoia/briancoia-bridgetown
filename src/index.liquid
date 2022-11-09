@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<section id="about" class="prose prose-slate dark:prose-invert prose-a:text-green-600 hover:prose-a:text-green-500 dark:prose-a:text-green-500 dark:hover:prose-a:text-green-400 px-4 mb-4" data-controller="toggle">
+  <h2>Hi, I'm Brian!</h2>
+  <p>I'm currently working at a <a href="http://www.fangamer.com">Fangamer</a> as a Web Developer.</p>
+  <p><button data-action="click->toggle#toggle touch->toggle#toggle" class="text-green-600 dark:text-green-500 hover:!text-green-400" data-toggle-target="toggleable">More about me <i class="fas fa-chevron-right"></i></button></p>
+
+  <div class="hidden" data-toggle-target="toggleable">
+    <p>I work on the Shopify front-end and various internal tools and applications, largely developed in Ruby on Rails and modern JavaScript.</p>
+    <p>I graduated with a Computer Science degree from University of Wisconsin-Parkside in 2014 (with a minor in Web Development), then dove headfirst into a career as a web developer.</p>
+    <p>I collect and build controllers for rhythm games and fighting games. I used to run <a href="https://redco.in/tm">game servers</a> for <a href="https://giantbomb.com">Giant Bomb</a>. I play dumb games psuedo-competitively; for example, I am the <a href="https://twitter.com/redcoin/status/576183007997886464">Fun and Games Champion of Ultimate Fighting Game Tournament 10</a>. I occasionally stream on <a href="https://twitch.tv/redcoin">Twitch</a>.</p>
+  </div>
+</section>
+
+<section id="projects" class="container max-w-prose px-4 mb-8">
+  <div class="prose prose-slate dark:prose-invert mb-4">
+    <h2>Recent Projects</h2>
+  </div>
+
+  <ul>
+  {% for project in collections.projects.resources limit:3 %}
+    {% render "project", project: project %}
+  {% endfor %}
+  </ul>
+
+  <a href="/projects" class="inline-block text-green-600 dark:text-green-500 hover:text-green-400 mt-4">More projects <i class="fas fa-chevron-right"></i></a>
+</section>
+
+<section id="contact" class="prose prose-slate dark:prose-invert prose-a:text-green-600 hover:prose-a:text-green-500 dark:prose-a:text-green-500 dark:hover:prose-a:text-green-400 px-4">
+  <h2>Contact Me</h2>
+  <ul>
+    <li><a href="https://twitter.com/redcoin">@redcoin</a>: My DMs are always open.</li>
+    <li><a href="mailto:brian@briancoia.com">Email</a>: If you don't like Twitter.</li>
+  </ul>
+</section>
