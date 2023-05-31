@@ -9,7 +9,6 @@ tags:
   - front-end
   - websockets
   - serverless
-  - jquery
 live_url: https://deltarune.com/sweepstakes/
 ---
 

@@ -9,6 +9,7 @@ tags:
   - hotwire
   - serverless
   - static site
+  - tailwind
 repo_url: https://github.com/bcoia/briancoia-bridgetown
 ---
 

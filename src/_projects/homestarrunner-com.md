@@ -7,6 +7,7 @@ description: |
   and Strong Bad emails page.
 tags:
   - front-end
+  - php
   - jquery
 live_url: https://homestarrunner.com
 ---
