@@ -9,6 +9,11 @@ tags:
   - front-end
   - php
   - jquery
+thumb: projects-homestar-thumb.png
+images:
+  - projects-homestar-1.png
+  - projects-homestar-2.png
+  - projects-homestar-3.png  
 live_url: https://homestarrunner.com
 ---
 

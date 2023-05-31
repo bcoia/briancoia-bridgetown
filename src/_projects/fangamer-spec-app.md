@@ -6,6 +6,11 @@ ongoing: true
 description: |
   Internal app that manages product specs, as well as an internal forum,
   calendar, wiki, and other tools.
+thumb: projects-specs-thumb.png
+images:
+  - projects-specs-1.png
+  - projects-specs-2.png
+  - projects-specs-3.png  
 tags:
   - back-end
   - rails

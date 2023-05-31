@@ -9,6 +9,9 @@ tags:
   - serverless
   - static site
   - tailwind
+thumb: projects-skies-thumb.png
+images:
+  - projects-skies-1.png
 live_url: https://toby.fangamer.com/girl/
 ---
 

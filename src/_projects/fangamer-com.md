@@ -11,6 +11,11 @@ tags:
   - shopify
   - bootstrap
   - jquery
+thumb: projects-fangamer-thumb.png
+images:
+  - projects-fangamer-1.png
+  - projects-fangamer-2.png
+  - projects-fangamer-3.png
 live_url: https://deltarune.com/sweepstakes/
 ---
 

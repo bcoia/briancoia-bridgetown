@@ -7,6 +7,12 @@ layout: default
     <h2 class="mb-0">{{ resource.title }}</h2>
     <h3 class="text-slate-500 font-normal mb-6 text-sm">{% if resource.data.ongoing %}Ongoing{% else %}{{ resource.date | date: "%B %Y" }}{% endif %}</h3>
 
+    {% for image in resource.data.images limit:1 %}
+    <a href="{{ '/images/' | append: image | relative_url }}" data-fancybox="project">
+      <img src="{{ '/images/' | append: image | relative_url }}" alt="Image {{ forloop.index }} of {{ resource.data.title }}" class="shadow-2xl" />
+    </a>
+    {% endfor %}
+
     {{ content }}
 
     {% if resource.data.live_url or resource.data.repo_url %}
@@ -16,6 +22,14 @@ layout: default
     </div>
     {% endif %}
   </article>
+
+  <div id="images" class="px-4 mt-12 block columns-2">
+    {% for image in resource.data.images offset:1 %}
+    <a href="{{ '/images/' | append: image | relative_url }}" data-fancybox="project">
+      <img src="{{ '/images/' | append: image | relative_url }}" alt="Image {{ forloop.index }} of {{ resource.data.title }}" class="shadow-xl" loading="lazy" />
+    </a>
+    {% endfor %}
+  </div>
 
   <div id="tags" class="px-4 mt-12 block">
     {% for tag in resource.tags %}

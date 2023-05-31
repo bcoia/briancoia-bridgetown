@@ -1,3 +1,6 @@
+import { Fancybox } from "@fancyapps/ui"
+import "@fancyapps/ui/dist/fancybox/fancybox.css"
+
 document.addEventListener("turbo:visit", () => {
   let main = document.querySelector("main");
   if (main.dataset.turboTransition == "false") return;
@@ -45,6 +48,16 @@ document.addEventListener("turbo:load", () => {
     ],
     { duration: 100, easing: "cubic-bezier(0.45, 0, 0.55, 1)" }
   )
+
+  Fancybox.bind("[data-fancybox], .fancybox", {
+    Toolbar: {
+      display: {
+        right: [
+          "close",
+        ],
+      },
+    }
+  })
 })
 
 document.addEventListener("turbo:render", () => {
