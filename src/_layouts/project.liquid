@@ -9,7 +9,7 @@ layout: default
 
     {% for image in resource.data.images limit:1 %}
     <a href="{{ '/images/' | append: image | relative_url }}" data-fancybox="project">
-      <img src="{{ '/images/' | append: image | relative_url }}" alt="Image {{ forloop.index }} of {{ resource.data.title }}" class="shadow-2xl" />
+      <img src="{{ '/images/' | append: image | relative_url }}" alt="Image {{ forloop.index }} of {{ resource.data.title }}" class="shadow-2xl" height="600" width="1024" />
     </a>
     {% endfor %}
 
@@ -26,7 +26,7 @@ layout: default
   <div id="images" class="px-4 mt-12 block columns-2">
     {% for image in resource.data.images offset:1 %}
     <a href="{{ '/images/' | append: image | relative_url }}" data-fancybox="project">
-      <img src="{{ '/images/' | append: image | relative_url }}" alt="Image {{ forloop.index }} of {{ resource.data.title }}" class="shadow-xl" loading="lazy" />
+      <img src="{{ '/images/' | append: image | relative_url }}" alt="Image {{ forloop.index }} of {{ resource.data.title }}" class="shadow-xl" loading="lazy" height="600" width="1024" />
     </a>
     {% endfor %}
   </div>
