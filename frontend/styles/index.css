@@ -87,6 +87,15 @@ a:hover, button:hover {
   color: theme('colors.green.400');
 }
 
+.lazyload, .lazyloading {
+  opacity: 0;
+  transition: opacity 0.15s ease-out;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 0.15s ease-out;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .animate nav, .animate footer, .animate #colorbar {
     animation: fadeIn 0.5s ease-out forwards;
