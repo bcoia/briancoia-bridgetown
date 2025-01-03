@@ -6,6 +6,7 @@
     <a href="mailto:{{ metadata.email }}"><i class="fas fa-fw fa-envelope" alt="Email"></i></a>
     {% if metadata.twitter %}<a href="https://twitter.com/{{ metadata.twitter }}"><i class="fab fa-fw fa-twitter" alt="Twitter @{{ metadata.twitter }}"></i></a>{% endif %}
     {% if metadata.mastodon %}<a rel="me" href="{{ metadata.mastodon }}"><i class="fab fa-fw fa-mastodon" alt="Mastodon @{{ metadata.mastodon }}"></i></a>{% endif %}
+    {% if metadata.bluesky %}<a rel="me" href="{{ metadata.bluesky }}"><i class="fab fa-fw fa-bluesky" alt="Bluesky @{{ metadata.bluesky }}"></i></a>{% endif %}
     {% if metadata.github %}<a href="https://github.com/{{ metadata.github }}"><i class="fab fa-fw fa-github" alt="GitHub user {{ metadata.github }}"></i></a>{% endif %}
     {% if metadata.linkedin %}<a href="https://linkedin.com/in/{{ metadata.linkedin }}"><i class="fab fa-fw fa-linkedin" alt="LinkedIn user {{ metadata.linkedin }}"></i></a>{% endif %}
   </div>
