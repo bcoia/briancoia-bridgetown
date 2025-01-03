@@ -1,8 +1,7 @@
 ---
 layout: project
-title: Fangamer.com
+title: Fangamer.com (v5)
 date: 2016-01-01
-ongoing: true
 description: |
   Storefront for Fangamer merchandise.
   Built using Shopify and reliable old technology.

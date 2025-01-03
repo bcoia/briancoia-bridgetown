@@ -1,7 +1,7 @@
 ---
 layout: project
 title: This Site
-date: 2022-09-30
+date: 2022-09-15
 description: |
   Static portfolio site written in Bridgetown.
 tags:
