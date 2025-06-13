@@ -36,7 +36,7 @@ end
 
 def contrasting_text_color(hex_color)
   color = hex_color.gsub('#','')
-  convert_to_brightness_value(color) > 382.5 ? darken_color(color) : lighten_color(color)
+  convert_to_brightness_value(color) > 382.5 ? '#000000' : '#ffffff'
 end
 
 def convert_to_brightness_value(hex_color)
